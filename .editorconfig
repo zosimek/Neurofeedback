@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# CS0436: Typ powoduje konflikt z zaimportowanym typem
+dotnet_diagnostic.CS0436.severity = silent
