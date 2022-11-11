@@ -21,6 +21,10 @@ public class PacManMenagere : MonoBehaviour
 
     public void UpdatePosition(bool isOverThreshold)
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            FindObjectOfType<ChangeScene>().LoadScene("Main");
+        }
         if(distanceTraveled < 87.6)
         {
             if (isOverThreshold == true)

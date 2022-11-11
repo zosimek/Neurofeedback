@@ -1,0 +1,1 @@
+svarog_streamer -a "RandomAmplifier" -n "eegSignal"

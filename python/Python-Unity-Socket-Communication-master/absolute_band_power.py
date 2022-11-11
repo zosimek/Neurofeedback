@@ -1,0 +1,35 @@
+import numpy as np
+from scipy import signal
+from scipy.integrate import simps
+
+
+def absolute_band_power(data):
+
+    sf = 500.
+
+    # Define window length (4 seconds)
+    win = 2 * 500
+    freqs, psd = signal.welch(data, sf, nperseg=win)
+
+
+    # Define lower and upper limits (example for delta)
+    # Alpha 8-12 Hz
+    # Lo-Betha 12-15 Hz
+    low, high = 12, 20
+
+    # Find intersecting values in frequency vector
+    idx_delta = np.logical_and(freqs >= low, freqs <= high)
+
+
+    # Frequency resolution
+    freq_res = freqs[1] - freqs[0]  # = 1 / 4 = 0.25
+
+    # Compute the absolute power by approximating the area under the curve
+    delta_power = simps(psd[idx_delta], dx=freq_res)
+
+
+    # Relative delta power (expressed as a percentage of total power)
+    total_power = simps(psd, dx=freq_res)
+    delta_rel_power = (delta_power / total_power) * 100
+
+    return delta_rel_power

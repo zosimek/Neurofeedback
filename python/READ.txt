@@ -1,0 +1,27 @@
+włączenie streamowania do LSL:
+w terminalu:
+
+# svarog_streamer -l 
+
+wypisze listę wzmacniaczy
+szukamy ID odpowiedniego wzmacniacza np:
+* Perun-8 Headset
+       id: "Perun8 1"
+
+odpalamy stream LSL danego wzmacniacza:
+
+# svarog_streamer -a "Perun8 1" -n "nazwa_streamu"
+
+nazwa streamu jest ważna, ponieważ streamy są widoczne w sieci LAN
+zaleta streamu jest też taka, że można podglądać go w Svarogu jednocześnie 
+
+
+parametry podawane przy uruchamianiu streamu:
+	-a : amp_id;
+	-n : stream_name ( dowolne nadawane ręcznie)
+	-s : sampling_rate (wybierane z dostępnych dla wzmacniacza)
+	-c : channel_name (nazwy challen'i urzywanych w streamie)
+
+svarog_streamer -a "Perun32 10" -n "eegSignal" -s "500" -c "ExG_4" ExG_6""
+
+svarog_streamer -a "Perun32 10" -n "eegSignal" -s "500" -c "ExG_10" ExG_12""

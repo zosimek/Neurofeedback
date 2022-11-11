@@ -24,6 +24,10 @@ public class RaceLakeController : MonoBehaviour
 
     public void UpdatePosition(bool isOverThreshold)
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            FindObjectOfType<ChangeScene>().LoadScene("Main");
+        }
         if (pathCreator != null)
         {
             if (isOverThreshold == true)
@@ -37,7 +41,7 @@ public class RaceLakeController : MonoBehaviour
             {
                 if (speed > 0)
                 {
-                    speed -= 0.2f;
+                    speed -= 0.1f;
                     if (speed < 0) 
                     {
                         speed = 0.0f;
