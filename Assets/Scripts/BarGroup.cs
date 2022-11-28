@@ -42,14 +42,20 @@ public class BarGroup : MonoBehaviour
             int index = button.transform.GetSiblingIndex();
             if (index == 0) 
             {
+                icon = button.transform.GetChild(0).gameObject;
+                icon.GetComponent<Image>().sprite = iconActivePatient;
                 button.background.sprite = tabActivePatient;
             }
             if (index == 1)
             {
+                icon = button.transform.GetChild(0).gameObject;
+                icon.GetComponent<Image>().sprite = iconActiveTraining;
                 button.background.sprite = tabActiveTraining;
             }
             if (index == 2)
             {
+                icon = button.transform.GetChild(0).gameObject;
+                icon.GetComponent<Image>().sprite = iconActiveSignal;
                 button.background.sprite = tabActiveSignal;
             }
 
