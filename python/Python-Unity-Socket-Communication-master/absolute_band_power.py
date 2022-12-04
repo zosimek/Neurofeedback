@@ -18,8 +18,9 @@ def absolute_band_power(data):
 
     # Define lower and upper limits (example for delta)
     # Alpha 8-12 Hz
+    # low, high = 8, 12
     # Lo-Betha 12-15 Hz
-    low, high = 12, 20
+    low, high = 12, 15
 
     # Find intersecting values in frequency vector
     idx_delta = np.logical_and(freqs >= low, freqs <= high)

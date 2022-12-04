@@ -8,8 +8,19 @@ public class ChangeScene : MonoBehaviour
     public static string sceneName;
     public void LoadScene(string name)
     {
-        sceneName = name;
-        SceneManager.LoadScene(sceneName);
+        if(sceneName != name)
+        {
+            sceneName = name;
+            if (sceneName == "Main")
+            {
+                SceneManager.LoadScene(sceneName);
+            }
+            else
+            {
+                SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
+            }
+        }
+        
     }
 
 }

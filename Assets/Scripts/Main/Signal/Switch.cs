@@ -9,16 +9,15 @@ public class Switch : MonoBehaviour
     public Image Off;
     [SerializeField]
     GameObject setThreshold;
-    [SerializeField]
-    bool autoThreshold;
+
 
     void Update()
     {
-        if (autoThreshold == true)
+        if (SignalPageValues.autoThreshold == true)
         {
             setThreshold.SetActive(false);
         }
-        if (autoThreshold == false)
+        if (SignalPageValues.autoThreshold == false)
         {
             setThreshold.SetActive(true);
         }
@@ -26,17 +25,15 @@ public class Switch : MonoBehaviour
 
     public void ON()
     {
-        autoThreshold = true;
-        Off.gameObject.SetActive(true);
-        On.gameObject.SetActive(false);
-        Debug.Log(autoThreshold);
+        SignalPageValues.autoThreshold = true;
+        Off.gameObject.SetActive(false);
+        On.gameObject.SetActive(true);
     }
 
     public void OFF()
     {
-        autoThreshold = false;
-        Off.gameObject.SetActive(false);
-        On.gameObject.SetActive(true);
-        Debug.Log(autoThreshold);
+        SignalPageValues.autoThreshold = false;
+        Off.gameObject.SetActive(true);
+        On.gameObject.SetActive(false);
     }
 }

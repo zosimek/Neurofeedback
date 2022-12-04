@@ -1601,7 +1601,7 @@ Camera:
     m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
+  m_TargetDisplay: 1
   m_TargetEye: 3
   m_HDR: 0
   m_AllowMSAA: 1
@@ -1622,7 +1622,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9cc5964b0ffe4409dd99a7270ab4de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isOverThreshold: 0
 --- !u!114 &219314206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1635,6 +1634,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b35067901b18b5459f346f04e9b16a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  band_power_list: []
+  time_list: []
 --- !u!1001 &232990694
 PrefabInstance:
   m_ObjectHideFlags: 0

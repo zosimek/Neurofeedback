@@ -39,9 +39,6 @@ while True:
         filter = [float(line.rstrip()) for line in f]
 
 
-    # TODO : test the filter
-    # TODO: BCI writing letter choosing
-
     el1 = []
     el2 = []
     for elem in sample:
