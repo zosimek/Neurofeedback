@@ -1,9 +1,12 @@
+using Proyecto26;
 using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class TimeOfTraining : MonoBehaviour
 {
+
+
 
     public Text sessionTimeValue;
     public float timeInSeconds;
@@ -60,7 +63,23 @@ public class TimeOfTraining : MonoBehaviour
         {
             timeInSeconds += Time.deltaTime;
             var ts = TimeSpan.FromSeconds(timeInSeconds);
-            sessionTimeValue.text = string.Format("{0:00}:{1:00}", ts.Minutes, ts.Seconds);
+            if (int.Parse(DisplayDuration.displayDuration) > ts.Minutes)
+            {
+                sessionTimeValue.text = string.Format("{0:00}:{1:00}", ts.Minutes, ts.Seconds);
+            }
+            else
+            {
+                sessionTimeValue.text = "00:00";
+                //PostSessionToDatabase();
+                FindObjectOfType<ChangeScene>().LoadScene("Main");
+            }
         }
+    }
+
+    public void PostSessionToDatabase()
+    {
+        SessionData sessionData = new SessionData();
+        string id = sessionData.date;
+        RestClient.Post<SessionData>("https://neurofeedback-5bc33-default-rtdb.europe-west1.firebasedatabase.app/sessions/" + PatientSession.patientId + ".json", sessionData).Then(customResponse => { Debug.Log("dodano sesjê"); });
     }
 }

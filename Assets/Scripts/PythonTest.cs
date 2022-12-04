@@ -13,9 +13,7 @@ public class PythonTest : MonoBehaviour
     int numToSendToPython = 0;
     UdpSocket udpSocket;
     bool isOverThreshold;
-    float band_power;
-    public List<float> band_power_list = new List<float>();
-    public List<string> time_list = new List<string>();
+    public static float band_power;
 
     public void QuitApp()
     {   
@@ -25,13 +23,9 @@ public class PythonTest : MonoBehaviour
 
     public void UpdatePythonRcvdText(string str)
     {
-        //tempStr = str;
-        string theTime = System.DateTime.Now.ToString();
-        //time_list.Add(theTime);
         band_power = float.Parse(str, CultureInfo.InvariantCulture.NumberFormat);
-        //band_power_list.Add(band_power);
-        Debug.Log(band_power);
-        if (band_power > 10)
+        DisplayFrequency.displayFrequency = band_power;
+        if (band_power > float.Parse(DisplayThreshold.displayThreshold, CultureInfo.InvariantCulture.NumberFormat))
         {
             isOverThreshold = true;
         }
@@ -39,6 +33,7 @@ public class PythonTest : MonoBehaviour
         {
             isOverThreshold = false;
         }
+        Debug.Log(isOverThreshold);
     }
 
     public void SendToPython()

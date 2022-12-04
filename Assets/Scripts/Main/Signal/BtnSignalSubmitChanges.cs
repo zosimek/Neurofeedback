@@ -13,7 +13,7 @@ public class BtnSignalSubmitChanges : MonoBehaviour
     }
     public void OnClick()
     {
-        DisplayThreshold.displayThreshold = SignalPageValues.signalEnteredThreshold + "%";
-        DisplayDuration.displayDuration = SignalPageValues.signalSessionDuration + "min";
+        DisplayThreshold.displayThreshold = SignalPageValues.signalEnteredThreshold.ToString();
+        DisplayDuration.displayDuration = SignalPageValues.signalSessionDuration.ToString();
     }
 }

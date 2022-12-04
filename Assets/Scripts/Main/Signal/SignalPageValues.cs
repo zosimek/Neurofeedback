@@ -22,8 +22,8 @@ public class SignalPageValues : MonoBehaviour
         autoThreshold = false;
         signalEnteredThreshold = 10;
         signalSessionDuration = 15;
-        DisplayThreshold.displayThreshold = signalEnteredThreshold + "%";
-        DisplayDuration.displayDuration = signalSessionDuration + "min";
+        DisplayThreshold.displayThreshold = signalEnteredThreshold.ToString();
+        DisplayDuration.displayDuration = signalSessionDuration.ToString();
     }
 
     public void Update()
