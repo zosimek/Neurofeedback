@@ -13369,7 +13369,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 780685225}
         m_TargetAssemblyTypeName: TimeOfTraining, Assembly-CSharp
-        m_MethodName: PostSessionToDatabase
+        m_MethodName: EndSession
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

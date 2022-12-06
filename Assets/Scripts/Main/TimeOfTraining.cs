@@ -69,8 +69,11 @@ public class TimeOfTraining : MonoBehaviour
             }
             else
             {
+                if (int.Parse(DisplayDuration.displayDuration) == ts.Minutes)
+                {
+                    PostSessionToDatabase();
+                }
                 sessionTimeValue.text = "00:00";
-                //PostSessionToDatabase();
                 FindObjectOfType<ChangeScene>().LoadScene("Main");
             }
         }
@@ -81,5 +84,11 @@ public class TimeOfTraining : MonoBehaviour
         SessionData sessionData = new SessionData();
         string id = sessionData.date;
         RestClient.Post<SessionData>("https://neurofeedback-5bc33-default-rtdb.europe-west1.firebasedatabase.app/sessions/" + PatientSession.patientId + ".json", sessionData).Then(customResponse => { Debug.Log("dodano sesjê"); });
+    }
+
+    public void EndSession()
+    {
+        PostSessionToDatabase();
+        FindObjectOfType<ChangeScene>().LoadScene("Main");
     }
 }
