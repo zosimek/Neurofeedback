@@ -1,5 +1,6 @@
 using Proyecto26;
 using System;
+using System.Globalization;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,7 +8,7 @@ public class TimeOfTraining : MonoBehaviour
 {
 
     public Text sessionTimeValue;
-    public float timeInSeconds;
+    public static float timeInSeconds;
 
     [HideInInspector]
     public bool focusPacMan;

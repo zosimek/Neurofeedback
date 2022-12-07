@@ -3139,7 +3139,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 48, y: 50}
+  m_SizeDelta: {x: 65, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &456363593
 MonoBehaviour:
@@ -5554,7 +5554,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sessionTimeValue: {fileID: 780685223}
-  timeInSeconds: 0
   focusPacMan: 0
   focusDruidWalk: 0
   focusLakeRace: 0
@@ -6237,7 +6236,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 48, y: 50}
+  m_SizeDelta: {x: 65, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &904920973
 MonoBehaviour:
@@ -6385,6 +6384,9 @@ GameObject:
   - component: {fileID: 934567351}
   - component: {fileID: 934567353}
   - component: {fileID: 934567354}
+  - component: {fileID: 934567356}
+  - component: {fileID: 934567355}
+  - component: {fileID: 934567357}
   m_Layer: 0
   m_Name: SceneController
   m_TagString: Untagged
@@ -6445,6 +6447,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   page3: {fileID: 115074801}
+--- !u!114 &934567355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934567350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52395b768bff51b47b52a369e1d969a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTxStarted: 0
+  IP: 127.0.0.1
+  rxPort: 8000
+  txPort: 8001
+--- !u!114 &934567356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934567350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b35067901b18b5459f346f04e9b16a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &934567357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934567350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b544e97a44a7acf45982900b4bca893f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frequencies: []
+  frequenciesArray: []
+  yAxis:
+  - 1
+  - 2
+  - 3
+  - 4
+  yAxisArray: []
+  lastFrequency: 0
 --- !u!1 &944231603
 GameObject:
   m_ObjectHideFlags: 0
@@ -10907,6 +10958,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1661767327}
+  - component: {fileID: 1661767328}
   m_Layer: 0
   m_Name: AudioController
   m_TagString: Untagged
@@ -10931,6 +10983,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1661767328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661767326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 473e6dc4a36af234b99cac4c4de84757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioOverThreshold: {fileID: 1460527618}
+  audioUnderThreshold: {fileID: 306876207}
 --- !u!1 &1681509344
 GameObject:
   m_ObjectHideFlags: 0
