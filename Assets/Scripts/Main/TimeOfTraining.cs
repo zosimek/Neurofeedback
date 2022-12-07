@@ -6,18 +6,31 @@ using UnityEngine.UI;
 public class TimeOfTraining : MonoBehaviour
 {
 
-
-
     public Text sessionTimeValue;
     public float timeInSeconds;
 
-
+    [HideInInspector]
     public bool focusPacMan;
+    [HideInInspector]
     public bool focusDruidWalk;
+    [HideInInspector]
     public bool focusLakeRace;
+    [HideInInspector]
     public bool relaxSea;
+    [HideInInspector]
     public bool relaxCats;
+    [HideInInspector]
     public bool relaxBird;
+
+    public AudioSource audioOverThreshold;
+    public AudioSource audioUnderThreshold;
+
+    public AudioClip sea;
+    public AudioClip storm;
+    public AudioClip cat;
+    public AudioClip lion;
+    public AudioClip birds;
+    public AudioClip raven;
 
 
     // Concentration training
@@ -40,14 +53,29 @@ public class TimeOfTraining : MonoBehaviour
     public void onClickRelaxSea(bool clicked)
     {
         relaxSea = clicked;
+        audioOverThreshold.clip = sea;
+        audioUnderThreshold.clip = storm;
+
+        audioOverThreshold.Play();
+        audioUnderThreshold.Play();
     }
     public void onClickRelaxCats(bool clicked)
     {
         relaxCats = clicked;
+        audioOverThreshold.clip = cat;
+        audioUnderThreshold.clip = lion;
+
+        audioOverThreshold.Play();
+        audioUnderThreshold.Play();
     }
     public void onClickRelaxBirds(bool clicked)
     {
         relaxBird = clicked;
+        audioOverThreshold.clip = birds;
+        audioUnderThreshold.clip = raven;
+
+        audioOverThreshold.Play();
+        audioUnderThreshold.Play();
     }
 
 
