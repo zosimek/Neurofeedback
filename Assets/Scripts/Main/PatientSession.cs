@@ -20,7 +20,7 @@ public class PatientSession : MonoBehaviour
     private void RetriveFromDatabase()
     {
         // get .json text that contains all the data from firebase database
-        RestClient.Get("https://neurofeedback-5bc33-default-rtdb.europe-west1.firebasedatabase.app/patients/" + patientId + ".json").Then(response => {
+        RestClient.Get("https://neurofeedback-10031975-default-rtdb.europe-west1.firebasedatabase.app/patients/" + patientId + ".json").Then(response => {
             var responseJson = response.Text;
 
             // Using the FullSerializer library: https://github.com/jacobdufault/fullserializer

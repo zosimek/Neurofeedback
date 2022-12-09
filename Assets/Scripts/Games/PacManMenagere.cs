@@ -19,7 +19,7 @@ public class PacManMenagere : MonoBehaviour
     int i = 0;
 
 
-    public void UpdatePosition(bool isOverThreshold)
+    public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -27,7 +27,7 @@ public class PacManMenagere : MonoBehaviour
         }
         if(distanceTraveled < 87.6)
         {
-            if (isOverThreshold == true)
+            if (PythonTest.isOverThreshold == true)
             {
                 Debug.Log(distanceTraveled);
 

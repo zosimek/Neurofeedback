@@ -1634,8 +1634,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b35067901b18b5459f346f04e9b16a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  band_power_list: []
-  time_list: []
 --- !u!1001 &232990694
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10966,7 +10964,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2054977018}
   - component: {fileID: 2054977017}
-  - component: {fileID: 2054977019}
   m_Layer: 0
   m_Name: Path
   m_TagString: Untagged
@@ -11032,7 +11029,7 @@ MonoBehaviour:
       - 0
       globalNormalsAngle: 90
       flipNormals: 0
-    vertexPathUpToDate: 1
+    vertexPathUpToDate: 0
     vertexPathMaxAngleError: 0.3
     vertexPathMinVertexSpacing: 0.01
     showTransformTool: 1
@@ -11068,22 +11065,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2054977019
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2054977016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52395b768bff51b47b52a369e1d969a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isTxStarted: 0
-  IP: 127.0.0.1
-  rxPort: 8000
-  txPort: 8001
 --- !u!1001 &2055539407
 PrefabInstance:
   m_ObjectHideFlags: 0

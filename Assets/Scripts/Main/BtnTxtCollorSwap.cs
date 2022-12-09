@@ -64,11 +64,11 @@ public class BtnTxtCollorSwap : MonoBehaviour, IPointerEnterHandler, IPointerExi
     {
         if (btn.interactable)
         {
-            txt.color = Color.white;
+            txt.color = baseColor;
         }
         else
         {
-            txt.color = Color.white;
+            txt.color = baseColor;
         }
     }
 

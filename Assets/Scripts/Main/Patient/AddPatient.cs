@@ -52,9 +52,9 @@ public class AddPatient : MonoBehaviour
         string guid = Guid.NewGuid().ToString();
 
         string id = user.firstName.ToLower() + user.lastName.ToLower() + "_" + guid;
-        //RestClient.Put("https://neurofeedback-5bc33-default-rtdb.europe-west1.firebasedatabase.app/patients/" + id + ".json", user);
+        //RestClient.Put("https://neurofeedback-10031975-default-rtdb.europe-west1.firebasedatabase.app/" + id + ".json", user);
 
-        RestClient.Put<User>("https://neurofeedback-5bc33-default-rtdb.europe-west1.firebasedatabase.app/patients/" + id + ".json", user).Then(customResponse => {
+        RestClient.Put<User>("https://neurofeedback-10031975-default-rtdb.europe-west1.firebasedatabase.app/patients/" + id + ".json", user).Then(customResponse => {
             GameObject.Find("InputFirstName").GetComponent<InputField>().Select();
             GameObject.Find("InputFirstName").GetComponent<InputField>().text = "";
             GameObject.Find("InputLastName").GetComponent<InputField>().Select();

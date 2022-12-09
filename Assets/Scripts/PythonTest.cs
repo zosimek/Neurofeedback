@@ -12,7 +12,7 @@ public class PythonTest : MonoBehaviour
     //string tempStr = "Sent from Python xxxx";
     int numToSendToPython = 0;
     UdpSocket udpSocket;
-    bool isOverThreshold;
+    public static bool isOverThreshold;
     public static float band_power;
 
     public void QuitApp()
@@ -51,14 +51,6 @@ public class PythonTest : MonoBehaviour
 
     void Update()
     {
-        if(ChangeScene.sceneName  == "Pac-man") 
-        { 
-            FindObjectOfType<PacManMenagere>().UpdatePosition(isOverThreshold);
-        }
-        else if (ChangeScene.sceneName == "RaceLake")
-        {
-            FindObjectOfType<RaceLakeController>().UpdatePosition(isOverThreshold);
-        }
         //pythonRcvdText.text = tempStr;
         //Debug.Log(isOverThreshold);
     }

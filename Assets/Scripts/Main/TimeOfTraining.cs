@@ -112,7 +112,7 @@ public class TimeOfTraining : MonoBehaviour
     {
         SessionData sessionData = new SessionData();
         string id = sessionData.date;
-        RestClient.Post<SessionData>("https://neurofeedback-5bc33-default-rtdb.europe-west1.firebasedatabase.app/sessions/" + PatientSession.patientId + ".json", sessionData).Then(customResponse => { Debug.Log("dodano sesjê"); });
+        RestClient.Post<SessionData>("https://neurofeedback-10031975-default-rtdb.europe-west1.firebasedatabase.app/sessions/" + PatientSession.patientId + ".json", sessionData).Then(customResponse => { Debug.Log("dodano sesjê"); });
     }
 
     public void EndSession()

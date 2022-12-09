@@ -22,7 +22,7 @@ public class RaceLakeController : MonoBehaviour
         }
     }
 
-    public void UpdatePosition(bool isOverThreshold)
+    public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -30,7 +30,7 @@ public class RaceLakeController : MonoBehaviour
         }
         if (pathCreator != null)
         {
-            if (isOverThreshold == true)
+            if (PythonTest.isOverThreshold == true)
             {
                 if (speed < 40)
                 {

@@ -9,9 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Main.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/Games 1/Pac-man.unity
-    guid: 7c26870310fc3f44181742a2ee173b5e
-  - enabled: 1
     path: Assets/Scenes/Games/RaceLake.unity
     guid: 0f72421c04134004aa761eae681ee356
+  - enabled: 1
+    path: Assets/Scenes/Games/Pac-man.unity
+    guid: 3852a0da995ad1e489ea9d149eec09dc
   m_configObjects: {}
