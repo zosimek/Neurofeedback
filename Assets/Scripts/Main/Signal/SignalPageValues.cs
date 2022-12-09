@@ -13,6 +13,7 @@ public class SignalPageValues : MonoBehaviour
     public static double signalEnteredThreshold;
     [SerializeField]
     public static int signalSessionDuration;
+    public static int signalSuccessFactor;
 
     public GameObject page3;
 
@@ -32,6 +33,7 @@ public class SignalPageValues : MonoBehaviour
         {
             GetEnteredThreshold();
             GetSessionDuration();
+            GetSuccessFactor();
         } 
     }
 
@@ -39,7 +41,8 @@ public class SignalPageValues : MonoBehaviour
     {
         if(Switch.isThresholdAuto == true)
         {
-            if(AutoThreshold.slope < -1)
+            // Slope Method /////////////////////////
+            /*if(AutoThreshold.slope < -1)
             {
                 signalEnteredThreshold -= 0.0005;
             }
@@ -54,15 +57,9 @@ public class SignalPageValues : MonoBehaviour
             if (AutoThreshold.slope < -0.5)
             {
                 signalEnteredThreshold -= 0.0003;
-            }
-            /*if (AutoThreshold.slope > 0.3)
-            {
-                signalEnteredThreshold += 0.0001;
-            }
-            if (AutoThreshold.slope < -0.3)
-            {
-                signalEnteredThreshold -= 0.0001;
             }*/
+
+            // Success Factor Method //////////////////////
             DisplayThreshold.displayThreshold = signalEnteredThreshold.ToString();
         }
         else
@@ -81,6 +78,17 @@ public class SignalPageValues : MonoBehaviour
         if (GameObject.Find("InputDuration").GetComponent<InputField>().text != null & GameObject.Find("InputDuration").GetComponent<InputField>().text != "")
         {
             signalSessionDuration = int.Parse(GameObject.Find("InputDuration").GetComponent<InputField>().text);
+        }
+    }
+
+    public void GetSuccessFactor()
+    {
+        if(Switch.isThresholdAuto == true)
+        {
+            if (GameObject.Find("InputSuccessFactor").GetComponent<InputField>().text != null & GameObject.Find("InputSuccessFactor").GetComponent<InputField>().text != "")
+            {
+                signalSuccessFactor = int.Parse(GameObject.Find("InputSuccessFactor").GetComponent<InputField>().text);
+            }
         }
     }
 }

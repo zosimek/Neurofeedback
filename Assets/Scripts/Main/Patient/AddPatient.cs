@@ -39,7 +39,7 @@ public class AddPatient : MonoBehaviour
 
         sex = SetSex.sexSelected;
 
-        Debug.Log(firstName + "--" + lastName + "--" + day + "--" + month + "--" + year + "--" + sex);
+        //Debug.Log(firstName + "--" + lastName + "--" + day + "--" + month + "--" + year + "--" + sex);
         PostToDatabase();
         GameObject.Find("InputFirstName").GetComponent<InputField>().text = "";
         GameObject.Find("InputLastName").GetComponent<InputField>().text = "";

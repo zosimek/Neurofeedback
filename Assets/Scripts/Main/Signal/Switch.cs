@@ -9,6 +9,8 @@ public class Switch : MonoBehaviour
     public Image Off;
     [SerializeField]
     GameObject setThreshold;
+    [SerializeField]
+    GameObject setSuccessFactor;
     public static bool isThresholdAuto;
 
 
@@ -17,11 +19,13 @@ public class Switch : MonoBehaviour
         if (SignalPageValues.autoThreshold == true)
         {
             setThreshold.SetActive(false);
+            setSuccessFactor.SetActive(true);
             isThresholdAuto = true;
         }
         if (SignalPageValues.autoThreshold == false)
         {
             setThreshold.SetActive(true);
+            setSuccessFactor.SetActive(false);
             isThresholdAuto = false;
         }
     }

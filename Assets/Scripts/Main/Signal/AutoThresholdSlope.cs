@@ -28,7 +28,6 @@ public class AutoThreshold : MonoBehaviour
     {
         if (frequencies.Count < 4)
         {
-            Debug.Log("Length: " + frequencies.Count);
             if (lastFrequency != Convert.ToDouble(DisplayFrequency.displayFrequency))
             {
                 lastFrequency = Convert.ToDouble(DisplayFrequency.displayFrequency);
@@ -41,7 +40,7 @@ public class AutoThreshold : MonoBehaviour
             yAxisArray = yAxis.ToArray();
             LinearRegression.Program.LinearRegression(frequenciesArray, yAxisArray);
             frequencies = new List<double>();
-            Debug.Log("Slope: " + slope);
+            //Debug.Log("Slope: " + slope); Debug
         }
     }
 }
