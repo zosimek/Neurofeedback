@@ -1,5 +1,7 @@
 **Neurofeedback Application (EEG Biofeedback)**
+
 **Overview**
+
 This repository contains a neurofeedback (EEG biofeedback) application developed as part of an engineering thesis at Wrocław University of Science and Technology.
 The system combines real-time EEG acquisition, signal processing in Python, and interactive feedback implemented in Unity to support relaxation and concentration training in healthy individuals.
 
@@ -7,6 +9,7 @@ The application follows a brain–computer interface (BCI) paradigm and uses neu
 
 
 **System Architecture**
+
 The project consists of two main components:
   — Python backend (signal processing)
   — Unity application (visual & auditory feedback)
@@ -23,6 +26,7 @@ Unity application (games & feedback)
 
 
 **EEG Acquisition**
+
   — Device: Perun-32 EEG amplifier
   — Manufacturer: BrainTech (Warsaw, Poland)
   — Electrode system: International 10–20 system
@@ -31,6 +35,7 @@ The EEG signal is acquired using BrainTech’s Perun-32 amplifier and streamed t
 
 
 **Signal Processing (Python)**
+
 The Python script performs real-time EEG preprocessing and feature extraction:
   — Band-pass filtering (1–35 Hz)
   — Power spectral density estimation using Welch’s periodogram
@@ -42,6 +47,7 @@ The calculated relative band power values are continuously transmitted to the Un
 
 
 **Neurofeedback Protocols**
+
 The application implements two EEG neurofeedback protocols:
 Relaxation (Alpha protocol)
   — Target band: Alpha (8–13 Hz)
@@ -56,6 +62,7 @@ Concentration (SMR protocol)
   
 
 **Unity Application**
+
 The Unity application is the core user interface and feedback system.
 Features
   — 3 relaxation training variants (audio-based feedback)
@@ -69,11 +76,13 @@ Features
 
 
 **Feedback principle**
+
 The game or audio feedback responds dynamically depending on whether the user’s EEG band power is above or below a threshold.
 Thresholds can be adjusted manually or automatically to maintain a predefined success rate during training.
 
 
 **Automatic Threshold Control**
+
 An automatic threshold control algorithm (ATCA) is implemented to:
   — Adapt task difficulty to individual users
   — Maintain a target success factor during sessions
@@ -83,6 +92,7 @@ Thresholds are adjusted dynamically based on the proportion of time EEG features
 
 
 **Experimental Validation**
+
 A proof-of-concept experiment was conducted with healthy participants:
   — 3 training sessions per participant
   — Separate relaxation and concentration groups
@@ -94,6 +104,7 @@ Due to sample size and experimental constraints, results are indicative rather t
 
 
 **Technologies Used**
+
   — Python – EEG preprocessing and feature extraction
   — Unity (C#) – Games and feedback interface
   — EEG hardware – Perun-32 (BrainTech)
@@ -102,6 +113,7 @@ Due to sample size and experimental constraints, results are indicative rather t
 
 
 **Thesis Reference**
+
 The full theoretical background, methodology, experimental design, and results are described in the accompanying engineering thesis:
   An application for EEG biofeedback
   Zofia Dobrowolska, Wrocław University of Science and Technology, 2023
