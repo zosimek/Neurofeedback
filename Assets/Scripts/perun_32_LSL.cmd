@@ -1,0 +1,1 @@
+svarog_streamer -a "Perun32 30" -n "eegSignal"
